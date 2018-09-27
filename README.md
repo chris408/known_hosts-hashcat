@@ -16,9 +16,7 @@ Example known_hosts hashing configuration enabled in /etc/ssh/ssh_config:
 ```
 ## The known_hosts file can help Red Teams
 
-During an engagement I ran into a server and network that had detailed network monitoring. I had a shell, but before doing a network scan I wanted to see what other systems I could try to connect to. If an admin has already connected to an SSH server, there is a good chance this wont raise an alarm. 
-
-Much like the SSH worm idea, Red Teamers and attackers will use these files to detect other hosts on a given network. This is usually preferred as a network scan with nmap and masscan is very noisy and may be detected. However, if the file is hashed, they aren't as useful, unless you can find a way to crack the hashes.
+During an engagement I ran into a server and network that had detailed network monitoring. I had a shell and I had located a users SSH key. Normally you can read the .bash_history for a given user and see which hosts the user has used ssh to log into, but in this case it seemed the .bash_history file had rolled over. Since there weren't very may ssh commands I decided to try to find a way to crack the hashes in the known_hosts file. Having a list of IP addresses with other SSH servers would be helpful to have, as I wouldn't need to do a noisy network scan to locate them. Also, if an attacker only logs into servers that the admin has already used, there is a good chance this wont raise an alarm and you can stay undetected. 
 
 ## known_hosts file format
 
