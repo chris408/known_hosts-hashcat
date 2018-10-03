@@ -62,7 +62,7 @@ I found the following [post](https://hashcat.net/forum/archive/index.php?thread-
 
 ## Can OpenSSH find a solution to solve defend against this attack?
 
-It doesn't seem like there would be a clear solution. If they used a more expensive hashing algorythm like bcrypt, the GPUs could still crack the entire IPv4 address space for a single hash in ~50 hours with a single Nvidia 1080 GTX ti. A single card can do about 23223 bcrypt Hashes/second per [this benchmark](https://gist.github.com/epixoip/ace60d09981be09544fdd35005051505) (4,294,967,296 ip addresses / 23223 hashes a second / 60 second per minute / 60 minutes per hour = 51.3 Hours). Also, if bcrypt was used, this could cause slowness or performance issues potentially, especially for lower powered embedded devices.
+It doesn't seem like there would be a clear solution. If they used a more expensive hashing algorithm like bcrypt, the GPUs could still crack the entire IPv4 address space for a single hash in ~50 hours with a single Nvidia 1080 GTX ti. A single card can do about 23223 bcrypt Hashes/second per [this benchmark](https://gist.github.com/epixoip/ace60d09981be09544fdd35005051505) (4,294,967,296 ip addresses / 23223 hashes a second / 60 second per minute / 60 minutes per hour = 51.3 Hours). Also, if bcrypt was used, this could cause slowness or performance issues potentially, especially for lower powered embedded devices.
 
 ## Example usage
 
