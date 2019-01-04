@@ -64,6 +64,8 @@ I found the following [post](https://hashcat.net/forum/archive/index.php?thread-
 
 It doesn't seem like there would be a clear solution. If they used a more expensive hashing algorithm like bcrypt, the GPUs could still crack the entire IPv4 address space for a single hash in ~50 hours with a single Nvidia 1080 GTX ti. A single card can do about 23223 bcrypt Hashes/second per [this benchmark](https://gist.github.com/epixoip/ace60d09981be09544fdd35005051505) (4,294,967,296 ip addresses / 23223 hashes a second / 60 second per minute / 60 minutes per hour = 51.3 Hours). Also, if bcrypt was used, this could cause slowness or performance issues potentially, especially for lower powered embedded devices.
 
+Edit: I spoke with someone (Aaron) about this attack and he made a good point. If you use IPv6, this attack would be less feasble (read: impossible) for the time being. There are 340,282,366,920,938,463,463,374,607,431,768,211,456 total possible IPv6 addresses.
+
 ## Example usage
 
 ```shell
